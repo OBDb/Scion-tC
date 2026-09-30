@@ -502,11 +502,11 @@
   ]},
 { "hdr": "750", "rax": "758", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "1005"}, "freq": 15,
   "signals": [
-    {"id": "TC_TP_1", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
-    {"id": "TC_TP_2", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
-    {"id": "TC_TP_3", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "TC_TP_4", "path": "Tires", "fmt": {"bix": 56, "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "TC_TP_5", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Spare tire pressure"}
+    {"id": "TC_TP_1", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "nullmax": 56.12, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "TC_TP_2", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "nullmax": 56.12, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
+    {"id": "TC_TP_3", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "nullmax": 56.12, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "TC_TP_4", "path": "Tires", "fmt": {"bix": 56, "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "nullmax": 56.12, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "TC_TP_5", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 56.12, "div": 4.125, "add": -5.6969697, "nullmin": 0, "nullmax": 56.12, "unit": "psi" }, "name": "Spare tire pressure"}
   ]},
 { "hdr": "780", "rax": "788", "dbg": true, "cmd": {"21": "04"}, "freq": 1,
   "signals": [
