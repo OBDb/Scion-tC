@@ -299,7 +299,7 @@
   ]},
 { "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "1621"}, "freq": 1,
   "signals": [
-    {"id": "TC_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear"}
+    {"id": "TC_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear", "suggestedMetric": "gear"}
   ]},
 { "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "1622"}, "freq": 1,
   "signals": [
@@ -575,7 +575,7 @@
   ]},
 { "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "47"}, "freq": 0.25,
   "signals": [
-    {"id": "TC_LAT_G",          "path": "Orientation", "fmt": {           "len": 8,  "max": 2.54,   "min": -2.56,   "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Lateral g"},
+    {"id": "TC_LAT_G",          "path": "Orientation", "fmt": {           "len": 8,  "max": 2.54,   "min": -2.56,   "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Lateral g",              "suggestedMetric": "lateralAcceleration"},
     {"id": "TC_LNG_G",          "path": "Orientation", "fmt": {"bix": 8,  "len": 8,  "max": 2.54,   "min": -2.56,   "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Forward and rearward g"},
     {"id": "TC_YAW",            "path": "Orientation", "fmt": {"bix": 16, "len": 8,  "max": 127,    "min": -128,               "add": -128,                  "unit": "scalar"  }, "name": "Yaw rate value"},
     {"id": "TC_STEERING_ANGLE", "path": "Control",     "fmt": {"bix": 24, "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "add": -3276.8,               "unit": "degrees" }, "name": "Steering angle value"}
@@ -821,9 +821,9 @@
   "signals": [
     {"id": "TC_CALCULATED_LOAD_7E0",       "path": "Engine",   "fmt": {            "len": 8,  "max": 100,                  "mul": 100, "div": 255,              "unit": "percent"           }, "name": "Calculated load"},
     {"id": "TC_MAF_7E0",                   "path": "Engine",   "fmt": {"bix": 24,  "len": 16, "max": 655.35,                           "div": 100,              "unit": "gramsPerSecond"    }, "name": "Mass air flow",                     "suggestedMetric": "massAirFlow"},
-    {"id": "TC_MAP_7E0",                   "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Manifold absolute pressure"},
-    {"id": "TC_INTAKE_AIR_7E0",            "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 215,      "min": -40,                          "add": -40, "unit": "celsius"           }, "name": "Intake air temperature"},
-    {"id": "TC_ATMOSPHERE_PRESSURE",       "path": "Engine",   "fmt": {"bix": 56,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Atmospheric pressure"},
+    {"id": "TC_MAP_7E0",                   "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Manifold absolute pressure",        "suggestedMetric": "absoluteBoostPressure"},
+    {"id": "TC_INTAKE_AIR_7E0",            "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 215,      "min": -40,                          "add": -40, "unit": "celsius"           }, "name": "Intake air temperature",            "suggestedMetric": "intakeAirTemperature"},
+    {"id": "TC_ATMOSPHERE_PRESSURE",       "path": "Engine",   "fmt": {"bix": 56,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Atmospheric pressure",              "suggestedMetric": "barometricPressure"},
     {"id": "TC_COOLANT_TEMP_7E0",          "path": "Engine",   "fmt": {"bix": 64,  "len": 8,  "max": 215,      "min": -40,                          "add": -40, "unit": "celsius"           }, "name": "Coolant temperature"},
     {"id": "TC_ENGINE_SPEED_7E0",          "path": "Engine",   "fmt": {"bix": 72,  "len": 16, "max": 16383.75,                         "div": 4,                "unit": "rpm"               }, "name": "Engine speed"},
     {"id": "TC_VEHICLE_SPEED_7E0",         "path": "Movement", "fmt": {"bix": 88,  "len": 8,  "max": 255,                                                       "unit": "kilometersPerHour" }, "name": "Vehicle speed",                     "suggestedMetric": "speed"},
@@ -842,8 +842,8 @@
   "signals": [
     {"id": "TC_CALCULATED_LOAD_7E0_V2",       "path": "Engine",   "fmt": {            "len": 8,  "max": 100,                  "mul": 100, "div": 255,              "unit": "percent"           }, "name": "Calculated load"},
     {"id": "TC_MAF_7E0_V2",                   "path": "Engine",   "fmt": {"bix": 24,  "len": 16, "max": 655.35,                           "div": 100,              "unit": "gramsPerSecond"    }, "name": "Mass air flow",                     "suggestedMetric": "massAirFlow"},
-    {"id": "TC_MAP_7E0_V2",                   "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Manifold absolute pressure"},
-    {"id": "TC_ATMOSPHERE_PRESSURE_V2",       "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Atmospheric pressure"},
+    {"id": "TC_MAP_7E0_V2",                   "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Manifold absolute pressure",        "suggestedMetric": "absoluteBoostPressure"},
+    {"id": "TC_ATMOSPHERE_PRESSURE_V2",       "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Atmospheric pressure",              "suggestedMetric": "barometricPressure"},
     {"id": "TC_COOLANT_TEMP_7E0_V2",          "path": "Engine",   "fmt": {"bix": 56,  "len": 8,  "max": 215,      "min": -40,                          "add": -40, "unit": "celsius"           }, "name": "Coolant temperature"},
     {"id": "TC_ENGINE_SPEED_7E0_V2",          "path": "Engine",   "fmt": {"bix": 64,  "len": 16, "max": 16383.75,                         "div": 4,                "unit": "rpm"               }, "name": "Engine speed"},
     {"id": "TC_VEHICLE_SPEED_7E0_V2",         "path": "Movement", "fmt": {"bix": 80,  "len": 8,  "max": 255,                                                       "unit": "kilometersPerHour" }, "name": "Vehicle speed",                     "suggestedMetric": "speed"},
@@ -880,7 +880,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "06"}, "freq": 1,
   "signals": [
-    {"id": "TC_MIL",                            "path": "DTCs", "fmt": {           "len": 1,  "max": 1,     "unit": "offon"      }, "name": "MIL"},
+    {"id": "TC_MIL",                            "path": "DTCs", "fmt": {           "len": 1,  "max": 1,     "unit": "offon"      }, "name": "MIL",                            "suggestedMetric": "checkEngineLightOn"},
     {"id": "TC_NUMBER_OF_EMISSION_DTC",         "path": "DTCs", "fmt": {"bix": 1,  "len": 7,  "max": 127,   "unit": "scalar"     }, "name": "Number of emission DTC"},
     {"id": "TC_COMPLETE_PARTS_MONITOR_AVAIL",   "path": "DTCs", "fmt": {"bix": 13, "len": 1,  "max": 1,     "unit": "offon"      }, "name": "Complete parts monitor_avail"},
     {"id": "TC_FUEL_SYSTEM_MONITOR_AVAIL",      "path": "DTCs", "fmt": {"bix": 14, "len": 1,  "max": 1,     "unit": "offon"      }, "name": "Fuel system monitor_avail"},
@@ -918,7 +918,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0F"}, "freq": 1,
   "signals": [
-    {"id": "TC_IAT_21", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Intake air temperature"}
+    {"id": "TC_IAT_21", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Intake air temperature", "suggestedMetric": "intakeAirTemperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "10"}, "freq": 1,
   "signals": [
@@ -1181,7 +1181,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D3"}, "freq": 0.25,
   "signals": [
-    {"id": "TC_CRUISE_CTRL_SPD", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control speed"},
+    {"id": "TC_CRUISE_CTRL_SPD", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control speed", "suggestedMetric": "cruiseSetSpeed"},
     {"id": "TC_CRUISE_CTRL_ON",  "path": "Engine",   "fmt": {"bix": 25, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cruise control on"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D9"}, "freq": 5,
